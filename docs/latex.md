@@ -1,6 +1,6 @@
 # List of LaText Mathematical Symbols
 
-[List of LaTex Mathematical Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+[List of LaTex Mathematical Symbols](c)
 
 
 ## Greek Letters
@@ -30,7 +30,7 @@
 | $\ne$ | \ne | Is not equal to |
 
 
-## Set and/or Logic Notation
+## Set Notation
 
 | Symbol | LaTex | Comment |
 |:-------|:------|:--------|
@@ -41,6 +41,24 @@
 | $\R$ | \R | Set of real numbers |
 | $\Z$ | \Z | Set of integers |
 
+
+
+## Logic Notation
+
+| Symbol | LaTex | Comment |
+|:-------|:------|:--------|
+| $\exists$ | \exists | There exists at least one |
+| $\nexists$ | \nexists | There does not exists |
+| $\forall$ | \forall | For all |
+| $\neg$ | \neg | Not |
+| $\lor$ | \lor | Or |
+| $\land$ | \land | And |
+| $\Rightarrow$ | \Rightarrow | Right arrow | 
+| $\Longrightarrow$ | \Longrightarrow | Long right arrow | 
+| $\Leftarrow$ | \Leftarrow | Left arrow | 
+| $\Longleftarrow$ | \Longleftarrow | Long left arrow | 
+| $\Leftrightarrow$ | \Leftarightrrow | Left and right arrow | 
+| $\iff$ | \iff | Long left and right arrow OR IFF | 
 
 ## Binary Operators
 

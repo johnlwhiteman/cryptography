@@ -1,79 +1,102 @@
 "use strict";
 
-function getDivisors(num) {
+function getDivisors(n) {
     var divisors = [];
 
-    for (let i = 1; i <= num; i++) {
-        if (0 == (num % i)) {
+    for (let i = 1; i <= n; i++) {
+        if (0 == (n % i)) {
             divisors.push(i);
         }
     }
+
     return divisors;
 }
 
-function getGCD(num1, num2) {
-    var candidates = [];
-    var bigNum = null;
+function getGCD(n1, n2) {
+    let candidates = [];
+    let nBiggest = null;
 
-    if (num1 < num2) {
-        candidates = getDivisors(num1);
-        bigNum = num2;
-    } else if (num1 > num2) {
-        candidates = getDivisors(num2);
-        bigNum = num1;
+    if ((!n1) || (!n2))
+        return null;
+
+    if (n1 == n2)
+        return n1;
+ 
+    if (n1 < n2) {
+        candidates = getDivisors(n1);
+        nBiggest = n2;
     } else {
-        return num1;
-    }
+        candidates = getDivisors(n2);
+        nBiggest = n1;
+    } 
+
     for (let i = candidates.length - 1; i >= 0; i--) {
-        if (0 == (bigNum % candidates[i])) {
+        if (0 == (nBiggest % candidates[i])) {
             return (candidates[i]);
         }
     }
     return null;
 }
 
-function getGCD(num1, num2) {
-    return (getGCD(num1, num2));
-}
-
-function getLCD(num1, num2) {
-    var numerator = Math.abs(num1 * num2);
-    var denominator = getGCD(num1, num2);
+function getGCDByEuclid(n1, n2) {
+    let a,b,q,r = null;
+    let history = [[a, b, q, r]];
     
-    if (0 == denominator) {
+    if ((!n1) || (!n2))
         return null;
+
+    if (n1 == n2)
+        return n1;
+
+    if (n1 > n2) {
+        a = n1;
+        b = n2;
+    } else {
+        a = n2;
+        b = n1;
     }
-    return (numerator / denominator);
+    while (true) {
+        q = Math.floor(a/b);
+        r = a - (q * b);
+        console.log(`${a} = ${b}(${q}) + (${r})`);
+        if (r == 0) {
+            if (null === history[0][3]) {
+                return b;
+            }
+            return history[0][3];
+        }
+        history[0] =[a, b, q, r];
+        a = b;
+        b = r;
+    }
+    return null;
 }
 
-function isCoprime(num1, num2) {
-    return (1 == getGCD(num1, num2));
+function isCoprime(n1, n2) {
+    return (1 == getGCD(n1, n2));
 }
 
-function isRelativePrime(num1, num2) {
-    return (isCoprime(num1, num2));
+function isRelativePrime(n1, n2) {
+    return (isCoprime(n1, n2));
 }
 
-let num1 = 24;
-let num2 = 54;
-console.log("num1: " + num1 + ", num2: " + num2);
-console.log(getDivisors(num1).toString());
-console.log(getDivisors(num2).toString());
-console.log(getGCD(num1, num2));
-console.log(isCoprime(num1, num2));
+function hello() {
+    console.log("hello");
+}
 
-num1 = 9;
-num2 = 28;
-console.log("num1: " + num1 + ", num2: " + num2);
-console.log(getDivisors(num1).toString());
-console.log(getDivisors(num2).toString());
-console.log(getGCD(num1, num2));
-console.log(isCoprime(num1, num2));
 
-num1 = 234;
-num2 = 123;
-console.log("num1: " + num1 + ", num2: " + num2);
-console.log(getDivisors(num1).toString());
-console.log(getDivisors(num2).toString());
-console.log(getGCD(num1, num2));
-console.log(isCoprime(num1, num2));
+
+/*
+let n1 = 15;
+let n2 = 40;
+let gcd = null;
+console.log(`gcd(${n1}, ${n2})`);
+//console.log(getDivisors(n1).toString());
+//console.log(getDivisors(n2).toString());
+gcd = getGCD(n1, n2);
+console.log(`The GCD is ${gcd}`);
+gcd = getGCDByEuclid(n1, n2);
+console.log(`The GCD is ${gcd}`);
+*/
+
+module.exports.isCoprime = isCoprime;

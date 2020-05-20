@@ -29,9 +29,47 @@ $10 \div 4=2R2$
 
 $14 \div 4=3R2$ 
 
-A negative trick
-$10 \equiv -2\ mod\ 4$ 
+## How to Find the Inverse of a Number in Modular Arthmetic.
 
-Just add $-2 + n$ or $-2 + 4 = 2$
+Let's say you have $27^{-1}\ mod\ 392$.
+
+### Extended Euclidean Geometry
+
+$$
+27^{-1}\ mod\ 392 \equiv 1
+\\~\\
+27x = 1
+\\~\\
+x = \frac{1}{27}=27^{-1}
+\\~\\
+27x\ mod\ 393 \equiv 1
+$$
+Unfortunately, we can't represent $27^{-1}$ since it's really a fraction $\frac{1}{27}$ and fractions don't exist in our a key space of $n=393\ \{0,1,2,3,...,391\}$
+
+We need to use the Euclidean algorithm to figure this stuff out.
+
+$$
+Let\ n = 393
+\\~\\
+Let\ b = 27^{-1}
+\\~\\
+27^{-1}\ mod\ 392
+$$
+First, create an equation with n on left side and the inverse of b on the right side times the number of times it can divide into n plus the remainder if any
+$$
+392 = 27 * (int(392/27)) + remainder 
+\\~\\
+392 = 27 * (14) + 14 
+$$
+We move just b (27) to the right side of the equation, replacing 392. On the right side we remove everything else except the remainder and set it up like before as such:
+$$
+27 = 14 * (int(27/14)) + remainder
+\\~\\
+27 = 14 * (1) + 13
+$$
+Rinse and repeat ...
+$$
+
+$$
 
 
