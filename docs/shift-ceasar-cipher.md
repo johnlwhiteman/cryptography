@@ -2,7 +2,6 @@
 
 Definition:
 
-
 $$
 Let\ p, c, k, \in \Z_{26}
 \\~\\
@@ -19,6 +18,14 @@ Here we shift letters in an alphabet.
 Notice convention here where plaintext is uppercase and ciphertext is lowercase.
 
 What is the keyspace. Well it would be 26 options for every letter. Since the shift key ciper is fixed for each letter, then the keyspace is 26.
+
+Boneh says that this is not a cipher at all since their is no random key. We could say the shift is the random key.
+
+Another thought is that there are two secrets: length and direction of the shift. 
+
+However, the direction of the shift can be negated such that there is an equivelnt shift 
+
+
 
 
 
