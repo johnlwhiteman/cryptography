@@ -22,6 +22,10 @@ There are an infinite number of prime numbers.
 
 2 is the only even prime number.
 
+2 and 3 are the only consecutive numbers which are prime.
+
+Every even number greater than 2 can be express as the sum of two primes (Goldbach Conjecture).
+
 When multiplying two prime numbers other than 2, the result will always be an odd number.
 
 
