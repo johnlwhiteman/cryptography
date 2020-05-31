@@ -16,7 +16,6 @@ $$
 Now create a table to represent this equation:
 
 $$
-
 Let\ a = b(q) + r
 \\~\\
 where
@@ -24,12 +23,11 @@ where
 q = floor(a/b)\ ...\ which\ is\ the\ quotient
 \\~\\
 r = remainder\ of\ a/b
-
 $$
 
 |    a    |    b    |    q    |    r    |
 |:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   | 
+|    40   |    15   |    2    |    10   |
 
 Next, add a new row to the table.
 
@@ -41,15 +39,15 @@ $b \Leftarrow r$
 
 |    a    |    b    |    q    |    r    |
 |:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   | 
-|    15   |    10   |         |         | 
+|    40   |    15   |    2    |    10   |
+|    15   |    10   |         |         |
 
 Solve for $q$ and $r$ like you did before, but with the new values for $a$ and $b$.
 
 |    a    |    b    |    q    |    r    |
 |:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   | 
-|    15   |    10   |    1    |    5    | 
+|    40   |    15   |    2    |    10   |
+|    15   |    10   |    1    |    5    |
 
 
 Repeat until $r = 0$ since $b$ can't be used to divide into $a$ if $0$.
@@ -57,9 +55,9 @@ Repeat until $r = 0$ since $b$ can't be used to divide into $a$ if $0$.
 
 |    a    |    b    |    q    |    r    |
 |:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   | 
-|    15   |    10   |    1    |    5    | 
-|    10   |    5    |    2    |    0    | 
+|    40   |    15   |    2    |    10   |
+|    15   |    10   |    1    |    5    |
+|    10   |    5    |    2    |    0    |
 
 
 The GCD is the value or $r$ from the previous row.
@@ -67,11 +65,12 @@ The GCD is the value or $r$ from the previous row.
 
 |    a    |    b    |    q    |    r    |
 |:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   | 
-|    15   |    10   |    1    |   (5)   | 
-|    10   |    5    |    2    |    0    | 
+|    40   |    15   |    2    |    10   |
+|    15   |    10   |    1    |   (5)   |
+|    10   |    5    |    2    |    0    |
 
 $gcd(15,40) = 5$
 
 
-That's it!
+If the final answer is 1, then it is coprime / relatively prime.
+

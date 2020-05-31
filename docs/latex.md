@@ -53,12 +53,14 @@
 | $\neg$ | \neg | Not |
 | $\lor$ | \lor | Or |
 | $\land$ | \land | And |
-| $\Rightarrow$ | \Rightarrow | Right arrow | 
-| $\Longrightarrow$ | \Longrightarrow | Long right arrow | 
-| $\Leftarrow$ | \Leftarrow | Left arrow | 
-| $\Longleftarrow$ | \Longleftarrow | Long left arrow | 
-| $\Leftrightarrow$ | \Leftarightrrow | Left and right arrow | 
-| $\iff$ | \iff | Long left and right arrow OR IFF | 
+| $\cup$ | \cup | Set union |
+| $\cap$ | \cap | Set intersection |
+| $\Rightarrow$ | \Rightarrow | Right arrow |
+| $\Longrightarrow$ | \Longrightarrow | Long right arrow |
+| $\Leftarrow$ | \Leftarrow | Left arrow |
+| $\Longleftarrow$ | \Longleftarrow | Long left arrow |
+| $\Leftrightarrow$ | \Leftarightrrow | Left and right arrow |
+| $\iff$ | \iff | Long left and right arrow OR IFF |
 
 ## Binary Operators
 
@@ -76,11 +78,11 @@
 
 $$
 f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi \xi x} \,d\xi
-$$ 
+$$
 
 ## Formatting
 
 New Line: &#92;&#92;
 
-Two New Lines: &#92;&#92;~&#92;&#92; 
+Two New Lines: &#92;&#92;~&#92;&#92;
 

@@ -36,15 +36,6 @@ function getPrimesBySieveOfEratosthenesAsGrid(n) {
     return grid;
 }
 
-function isPrimeByTrialDivision(n) {
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (0 == n % i) {
-            return false;
-        }
-    }
-    return true;
-}
-
 function getPrimesByTrialDivsion(n) {
     let primes = [];
     for (let i = 2; i <= n; i++) {
@@ -58,6 +49,20 @@ function getPrimesByTrialDivsion(n) {
     return primes;
 }
 
-console.log(getPrimesByTrialDivsion(100));
-console.log(getPrimesBySieveOfEratosthenes(100));
-console.log(getPrimesBySieveOfEratosthenesAsGrid(100));
+function isPrime(n) {
+    return isPrimeByTrialDivision(n);
+}
+
+function isPrimeByTrialDivision(n) {
+    for (let i = 2; i <= Math.sqrt(n); i++)
+        if (0 == n % i) return false;
+    return n > 1;
+}
+
+module.exports = {
+    getPrimesBySieveOfEratosthenes,
+    getPrimesBySieveOfEratosthenesAsGrid,
+    getPrimesByTrialDivsion,
+    isPrime,
+    isPrimeByTrialDivision
+};

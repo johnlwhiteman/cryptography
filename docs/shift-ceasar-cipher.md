@@ -1,6 +1,10 @@
 # Shift (Ceasar) Cipher
 
-Definition:
+**Def:**
+Let $p$ represent plaintext
+Let $c$ represent ciphertext
+Let $k$ represent direction of shift, e.g. +3 right shift, -3 left shift
+
 
 $$
 Let\ p, c, k, \in \Z_{26}
@@ -21,9 +25,9 @@ What is the keyspace. Well it would be 26 options for every letter. Since the sh
 
 Boneh says that this is not a cipher at all since their is no random key. We could say the shift is the random key.
 
-Another thought is that there are two secrets: length and direction of the shift. 
+Another thought is that there are two secrets: length and direction of the shift.
 
-However, the direction of the shift can be negated such that there is an equivelnt shift 
+However, the direction of the shift can be negated such that there is an equivelnt shift
 
 
 
@@ -35,7 +39,6 @@ Let K be the key:
 Example:
 
 $$
-
 Let\ K = 3
 \\~\\
 A \Rightarrow d
