@@ -25,9 +25,9 @@ q = floor(a/b)\ ...\ which\ is\ the\ quotient
 r = remainder\ of\ a/b
 $$
 
-|    a    |    b    |    q    |    r    |
-|:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   |
+| a    | b    | q    | r    |
+|:----:|:----:|:----:|:----:|
+|  40  |  15  |  2   |  10  |
 
 Next, add a new row to the table.
 
@@ -37,40 +37,39 @@ $a \Leftarrow b$
 
 $b \Leftarrow r$
 
-|    a    |    b    |    q    |    r    |
-|:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   |
-|    15   |    10   |         |         |
+| a    | b    | q    | r    |
+|:----:|:----:|:----:|:----:|
+|  40  |  15  |  2   |  10  |
+|  15  |  10  |      |      |
 
 Solve for $q$ and $r$ like you did before, but with the new values for $a$ and $b$.
 
-|    a    |    b    |    q    |    r    |
-|:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   |
-|    15   |    10   |    1    |    5    |
+| a    | b    | q    | r    |
+|:----:|:----:|:----:|:----:|
+|  40  |  15  |  2   |  10  |
+|  15  |  10  |  1   |  5   |
 
+We repeat.
 
-Repeat until $r = 0$ since $b$ can't be used to divide into $a$ if $0$.
+| a    | b    | q    | r    |
+|:----:|:----:|:----:|:----:|
+|  40  |  15  |  2   |  10  |
+|  15  |  10  |  1   |  5   |
+|  10  |  5   |  2   |  0   |
 
+Yet we repeat again. Notice here that $r=0$. This signals the next iteration as the last one.
 
-|    a    |    b    |    q    |    r    |
-|:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   |
-|    15   |    10   |    1    |    5    |
-|    10   |    5    |    2    |    0    |
+| a    | b    | q    | r    |
+|:----:|:----:|:----:|:----:|
+|  40  |  15  |  2   |  10  |
+|  15  |  10  |  1   |  5   |
+|  10  |  5   |  2   |  0   |
+|  5   |  0   |  X   |  X   |
 
-
-The GCD is the value or $r$ from the previous row.
-
-
-|    a    |    b    |    q    |    r    |
-|:-------:|:-------:|:-------:|:-------:|
-|    40   |    15   |    2    |    10   |
-|    15   |    10   |    1    |   (5)   |
-|    10   |    5    |    2    |    0    |
+It's time to stop since $\frac{5}{0}$ is undefined. This means that the value of $a$ is the GCD. We are done. This table approach makes it easy to code a solution too.
 
 $gcd(15,40) = 5$
 
 
-If the final answer is 1, then it is coprime / relatively prime.
+*Note: If the final answer is 1, then it is coprime / relatively prime.*
 

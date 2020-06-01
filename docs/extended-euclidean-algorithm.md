@@ -1,6 +1,6 @@
 # Euclidean Algorithm to Find GCD and Multiplicative Inverse
 
-First solve for GCD then if 1 we can say it has a multiplicative inverse.
+First solve for GCD then if 1 we can say it has a multiplicative inverse. *The extended Euclidean algorithm is particularly useful when a and b are coprime. With that provision, x is the modular multiplicative inverse of a modulo b, and y is the modular multiplicative inverse of b modulo a.*
 
 ## Bézout's Identity (Bay-ZOO)
 
@@ -18,7 +18,31 @@ $$
 $$
 
 
+## ToDo Section
 
+Find $gcd(161, 28)$ and also $s$ and $t$
+
+Assume: $s_{1} = 1$
+Assume: $s_{2} = 0$
+Assume: $t_{1} = 0$
+Assume: $t_{2} = 1$
+
+Given: $s = s_{1} - s_{2} \times q$
+Given: $t = t_{1} - t_{2} \times q$
+
+|    a    |    b    |    q    |    r    |    s1    |    s2    |   s    |    t1    |    t2    |    t    |
+|:-------:|:-------:|:-------:|:-------:|:--------:|:--------:|:------:|:--------:|:--------:|:-------:|
+|   161   |    28   |    5    |    21   |     1    |    0     |   1    |    0     |     1    |   -5    |
+|   28    |    21   |    1    |    7    |     0    |    1     |  -1    |    1     |    -5    |    6    |
+|   21    |    7    |    3    |    0    |     1    |   -1     |   4    |   -5     |     6    |   -23   |
+
+
+
+| a    | b    | q    | r    | s    | s1   | s2   | t    | t1   | t2   |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|  161 |  28  |  5   |  21  |  1   |  0     |   1    |    0     |     1    |   -5    |
+|  28  |  21  |  1   |  7   | -1   |    1     |  -1    |    1     |    -5    |    6    |
+|  21  |  7   |  3   |  0   |  4   |   -1     |   4    |   -5     |     6    |   -23   |
 
 ### References
 
