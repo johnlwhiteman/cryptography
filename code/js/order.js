@@ -2,6 +2,7 @@
 
 var gcd = require('./gcd.js');
 
+
 function getOrder(r, n, includeMetaFlag=false) {
     let a, b, o;
     let meta = [];
@@ -22,6 +23,30 @@ function getOrder(r, n, includeMetaFlag=false) {
 
     return o;
 }
+
+function getGeneratorCandidates(p, includeFails=false) {
+    let candidates = {}
+    let candidate = [1];
+    for (let i = 1; i < p; i++)
+        candidate.push(i);
+    for (let g = 2; g < p; g++) {
+        let tmpy = [];
+        for (let j = 1; j < p; j++) {
+            tmpy.push(g**j % p);
+        }
+        let isValid = 0 == candidate.filter(x => !tmpy.includes(x)).length;
+        if (isValid || (!isValid && includeFails)) {
+            candidates[g] = {}
+            candidates[g]["set"] = tmpy;
+            candidates[g]["isValid"] = isValid;
+        }
+    }
+    if (0 != Object.keys(candidates).length)
+        return candidates;
+    return null;
+}
+
+console.log(getGeneratorCandidates(7, true));
 
 function isPrimitiveRootModulo(r, n) {
     let o = getOrder(r, n, true);
@@ -47,7 +72,6 @@ function test() {
     console.log(gcd.isRelativelyPrime(r, n));
     console.log(isPrimitiveRootModulo(r, n));
     console.log(getOrder(r, n, true)[1]);
-
     r = 3;
     n = 7;
     console.log(gcd.isRelativelyPrime(r, n));
