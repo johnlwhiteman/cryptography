@@ -28,6 +28,12 @@ Every even number greater than 2 can be express as the sum of two primes (Goldba
 
 When multiplying two prime numbers other than 2, the result will always be an odd number.
 
+An integer greater than 1 that is evenly divisible by itself and 1 only
+2 is the only even prime number
+2 and 3 are the only consecutive numbers that are prime
+Every even number > 2 can be expressed as the sum of two primes
+Multiplying two numbers other than 2 results in an odd number
+There are infinite number of primes
 
 
 

@@ -30,6 +30,16 @@
 | $\ne$ | \ne | Is not equal to |
 
 
+## Boolean Symbols
+
+| Symbol | LaTex | Comment |
+|:-------|:------|:--------|
+| $\oplus$ | \oplus | Exclusive OR |
+| $\veebar$ | \vbar | Exclusive OR |
+
+
+
+
 ## Set Notation
 
 | Symbol | LaTex | Comment |
@@ -48,6 +58,7 @@
 | Symbol | LaTex | Comment |
 |:-------|:------|:--------|
 | $\exists$ | \exists | There exists at least one |
+| $\exists$! | \exists! | There exists exactly one |
 | $\nexists$ | \nexists | There does not exists |
 | $\forall$ | \forall | For all |
 | $\neg$ | \neg | Not |
@@ -86,3 +97,21 @@ New Line: &#92;&#92;
 
 Two New Lines: &#92;&#92;~&#92;&#92;
 
+
+## Arrows
+
+| Symbol | LaTex | Comment |
+|:-------|:------|:--------|
+| $\leftarrow$ | \leftarrow | Left arrow |
+| $\rightarrow$ | \rightarrow | Right arrow |
+| $\leftrightarrow$ | \leftrightarrow | Left Right arrow |
+| $\longleftarrow$ | \longleftarrow | Long Left arrow |
+| $\longrightarrow$ | \longrightarrow | Long Right arrow |
+| $\longleftrightarrow$ | \longleftrightarrow | Long Left Right arrow |
+| $\uparrow$ | \uparrow | Up arrow |
+| $\downarrow$ | \downarrow | Down arrow |
+| $\updownarrow$ | \updownarrow | Up Down arrow |
+| $\nwarrow$ | \nwarrow | Northwest arrow |
+| $\swarrow$ | \swarrow | Southwest arrow |
+| $\nearrow$ | \nearrow | Northwest arrow |
+| $\searrow$ | \searrow | Southwest arrow |

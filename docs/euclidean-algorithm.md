@@ -29,6 +29,11 @@ $$
 |:----:|:----:|:----:|:----:|
 |  40  |  15  |  2   |  10  |
 
+| a    | b    | r    | q    |
+|:----:|:----:|:----:|:----:|
+|  40  |  15  |  10  |  2   |
+
+
 Next, add a new row to the table.
 
 On the new line, left shift $b$ and $r$ and ignore $q$ and $r$:
@@ -37,33 +42,34 @@ $a \Leftarrow b$
 
 $b \Leftarrow r$
 
-| a    | b    | q    | r    |
+| a    | b    | r    | q    |
 |:----:|:----:|:----:|:----:|
-|  40  |  15  |  2   |  10  |
+|  40  |  15  |  10  |  2   |
 |  15  |  10  |      |      |
 
 Solve for $q$ and $r$ like you did before, but with the new values for $a$ and $b$.
 
-| a    | b    | q    | r    |
+| a    | b    | r    | q    |
 |:----:|:----:|:----:|:----:|
-|  40  |  15  |  2   |  10  |
-|  15  |  10  |  1   |  5   |
+|  40  |  15  |  10  |  2   |
+|  15  |  10  |  5   |  1   |
+
 
 We repeat.
 
-| a    | b    | q    | r    |
+| a    | b    | r    | q    |
 |:----:|:----:|:----:|:----:|
-|  40  |  15  |  2   |  10  |
-|  15  |  10  |  1   |  5   |
-|  10  |  5   |  2   |  0   |
+|  40  |  15  |  10  |  2   |
+|  15  |  10  |  5   |  1   |
+|  10  |  5   |  0   |  2   |
 
 Yet we repeat again. Notice here that $r=0$. This signals the next iteration as the last one.
 
-| a    | b    | q    | r    |
+| a    | b    | r    | q    |
 |:----:|:----:|:----:|:----:|
-|  40  |  15  |  2   |  10  |
-|  15  |  10  |  1   |  5   |
-|  10  |  5   |  2   |  0   |
+|  40  |  15  |  10  |  2   |
+|  15  |  10  |  5   |  1   |
+|  10  |  5   |  0   |  1   |
 |  5   |  0   |  X   |  X   |
 
 It's time to stop since $\frac{5}{0}$ is undefined. This means that the value of $a$ is the GCD. We are done. This table approach makes it easy to code a solution too.

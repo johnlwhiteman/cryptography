@@ -2,10 +2,10 @@
 
 ## [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/)
 ```sequence {theme="hand"}
-Bule->Rosa: Says Apa Kabar?
-Note right of Rosa: Rosa thinks\nfor a second
-Rosa-->Bule: Baik, baik, saja.
-Bule->>Rosa: Baik!
+Alice->Bob: Says Apa Kabar?
+Note right of Bob: Bob thinks\nfor a second
+Bob-->Alice: Baik, baik, saja.
+Alice->>Bob: Baik!
 ```
 
 ## [Mermaid](https://mermaid-js.github.io/mermaid/#/)
@@ -56,3 +56,8 @@ digraph G {
 }
 ```
 
+## SVG
+<svg height="100" width="100">
+<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+<rect x="25" y="25" width="50" height="50" stroke="orange" stroke-width="3" fill="blue" />
+</svg>
