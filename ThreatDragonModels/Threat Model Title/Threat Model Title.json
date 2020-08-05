@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "Threat Model Title",
+    "owner": "John L. Whiteman",
+    "description": "This is a high level description"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Main",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "John S. Andersen"
+  }
+}
