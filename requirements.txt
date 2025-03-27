@@ -1,0 +1,8 @@
+matplotlib
+memory_profiler
+numpy
+pandas
+psutil
+pycryptodome
+pycryptodomex
+scipy
